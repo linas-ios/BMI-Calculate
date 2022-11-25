@@ -9,11 +9,38 @@ import UIKit
 
 class ViewController: UIViewController {
 
+  @IBOutlet weak var heightLabel: UILabel!
+  @IBOutlet weak var weightLabel: UILabel!
+  @IBOutlet weak var heightSlider: UISlider!
+  @IBOutlet weak var weightSlider: UISlider!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view.
   }
 
-
+  @IBAction func heightSliderChanged(_ sender: UISlider) {
+    //String(format: "%.2f", sender.value )
+    //heightLabel.text = String(format: "%.2f", sender.value)
+    let heightSlide = (sender.value * 100).rounded() / 100
+    heightLabel.text = "\(heightSlide)m"
+  }
+  
+  
+  @IBAction func weightSliderChanged(_ sender: UISlider) {
+    let weight = String(format: "%.0f", sender.value)
+    weightLabel.text = "\(weight)kg"
+//    var weightSlide = (sender.value * 10).rounded() / 10
+//    weightLabel.text = "\(weightSlide)kg"
+    
+  }
+  
+  @IBAction func calculatedTapped(_ sender: UIButton) {
+    let height = heightSlider.value
+    let weight = weightSlider.value
+    let bmi = weight / pow(height, 2) //<- raise power 2 (m2)
+    
+    print(bmi)
+  }
+  
 }
 
