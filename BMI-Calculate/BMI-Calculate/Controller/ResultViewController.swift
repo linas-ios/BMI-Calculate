@@ -8,16 +8,23 @@
 import UIKit
 
 class ResultViewController: UIViewController {
-  @IBOutlet weak var bmiLabel: UILabel!
   
+  //MARK: Properties:
+  var bmiValue: String?
+  
+  //MARK: Outlets:
+  
+  @IBOutlet weak var bmiLabel: UILabel!
   @IBOutlet weak var showTipsLabel: UILabel!
   override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        bmiLabel.text = bmiValue
     }
-    
+  
+    //MARK: Actions:
+  
   @IBAction func recalculateTapped(_ sender: UIButton) {
+    self.dismiss(animated: true, completion: nil)
   }
   
 

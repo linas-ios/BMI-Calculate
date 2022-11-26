@@ -1,0 +1,69 @@
+//
+//  ViewController.swift
+//  BMI-Calculate
+//
+//  Created by Linas Nutautas on 24/11/2022.
+//
+
+import UIKit
+
+class CalculateViewController: UIViewController {
+  
+  var bmiResult = "0.0"
+  
+  @IBOutlet weak var heightLabel: UILabel!
+  @IBOutlet weak var weightLabel: UILabel!
+  @IBOutlet weak var heightSlider: UISlider!
+  @IBOutlet weak var weightSlider: UISlider!
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+  }
+  
+  @IBAction func heightSliderChanged(_ sender: UISlider) {
+    //String(format: "%.2f", sender.value )
+    //heightLabel.text = String(format: "%.2f", sender.value)
+    let heightSlide = (sender.value * 100).rounded() / 100
+    heightLabel.text = "\(heightSlide)m"
+  }
+  
+  
+  @IBAction func weightSliderChanged(_ sender: UISlider) {
+    let weight = String(format: "%.0f", sender.value)
+    weightLabel.text = "\(weight)kg"
+    //    var weightSlide = (sender.value * 10).rounded() / 10
+    //    weightLabel.text = "\(weightSlide)kg"
+    
+  }
+  
+  @IBAction func calculatedTapped(_ sender: UIButton) {
+    let height = heightSlider.value
+    let weight = weightSlider.value
+    var bmi = weight / pow(height, 2) //<- raise power 2 (m2)
+    //self its mean CalculateViewController
+    bmiResult = String(format: "%.1f", bmi)
+    self.performSegue(withIdentifier: "goToResult", sender: self)
+    
+  }
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "goToResult" {
+      let destinationVC = segue.destination as! ResultViewController
+      destinationVC.bmiValue = bmiResult
+    }
+  }
+  
+  //    //create object secondVC and initialization SecondViewController
+  //    let secondVC = SecondViewController()
+  //
+  //    //pass data from bmi in secondViewController
+  //    secondVC.bmiValue = String(format: "%.1f", bmi)
+  //
+  //    //move to secondViewController
+  //    self.present(secondVC, animated: true, completion: nil)
+  
+  
+  
+  
+}
+
