@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B037DB6B29324A320027F65F /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B037DB6A29324A320027F65F /* ResultViewController.swift */; };
 		B09C791829315D0300E722F8 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09C791729315D0300E722F8 /* SecondViewController.swift */; };
 		B0A26C4B29301DEE003B9BC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A26C4A29301DEE003B9BC4 /* AppDelegate.swift */; };
 		B0A26C4D29301DEE003B9BC4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A26C4C29301DEE003B9BC4 /* SceneDelegate.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B037DB6A29324A320027F65F /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		B09C791729315D0300E722F8 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		B0A26C4729301DEE003B9BC4 /* BMI-Calculate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BMI-Calculate.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0A26C4A29301DEE003B9BC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 			children = (
 				B09C791729315D0300E722F8 /* SecondViewController.swift */,
 				B0A26C4E29301DEE003B9BC4 /* ViewController.swift */,
+				B037DB6A29324A320027F65F /* ResultViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B037DB6B29324A320027F65F /* ResultViewController.swift in Sources */,
 				B09C791829315D0300E722F8 /* SecondViewController.swift in Sources */,
 				B0A26C4F29301DEE003B9BC4 /* ViewController.swift in Sources */,
 				B0A26C4B29301DEE003B9BC4 /* AppDelegate.swift in Sources */,
