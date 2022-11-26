@@ -126,10 +126,10 @@
             </objects>
             <point key="canvasLocation" x="116" y="-34"/>
         </scene>
-        <!--View Controller-->
+        <!--Result View Controller-->
         <scene sceneID="YYT-8b-6x6">
             <objects>
-                <viewController id="tIm-oc-9QT" sceneMemberID="viewController">
+                <viewController id="tIm-oc-9QT" customClass="ResultViewController" customModule="BMI_Calculate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8aF-y1-Kf9">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -168,6 +168,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="RECALCULATE"/>
+                                <connections>
+                                    <action selector="recalculateTapped:" destination="tIm-oc-9QT" eventType="touchUpInside" id="LYY-Da-7Jg"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zWi-gy-qJT"/>
@@ -184,6 +187,10 @@
                             <constraint firstAttribute="bottom" secondItem="fvp-y1-1ol" secondAttribute="bottom" id="trB-gQ-GaG"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bmiLabel" destination="T90-bn-Kza" id="DbT-q4-Xu0"/>
+                        <outlet property="showTipsLabel" destination="Ct1-vH-9Nf" id="qnM-fJ-Bft"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OAg-eX-Mea" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
