@@ -39,7 +39,15 @@ class ViewController: UIViewController {
     let weight = weightSlider.value
     let bmi = weight / pow(height, 2) //<- raise power 2 (m2)
     
-    print(bmi)
+    //create object secondVC and initialization SecondViewController
+    let secondVC = SecondViewController()
+    
+    //pass data from bmi in secondViewController
+    secondVC.bmiValue = String(format: "%.1f", bmi)
+    
+    //move to secondViewController
+    self.present(secondVC, animated: true, completion: nil)
+    
   }
   
 }

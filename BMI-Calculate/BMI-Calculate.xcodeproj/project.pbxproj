@@ -42,6 +42,7 @@
 		B09C78FC29311DF700E722F8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B0A26C5029301DEE003B9BC4 /* Main.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -57,6 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				B09C791729315D0300E722F8 /* SecondViewController.swift */,
+				B0A26C4E29301DEE003B9BC4 /* ViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -84,8 +86,6 @@
 				B09C78FD29311E0200E722F8 /* Models */,
 				B09C78FC29311DF700E722F8 /* View */,
 				B0A26C4A29301DEE003B9BC4 /* AppDelegate.swift */,
-				B0A26C5029301DEE003B9BC4 /* Main.storyboard */,
-				B0A26C4E29301DEE003B9BC4 /* ViewController.swift */,
 				B0A26C4C29301DEE003B9BC4 /* SceneDelegate.swift */,
 				B0A26C5329301DEF003B9BC4 /* Assets.xcassets */,
 				B0A26C5529301DEF003B9BC4 /* LaunchScreen.storyboard */,
