@@ -11,21 +11,28 @@ class ResultViewController: UIViewController {
   
   //MARK: Properties:
   var bmiValue: String?
+  var advice: String?
+  var color: UIColor?
   
   //MARK: Outlets:
   
   @IBOutlet weak var bmiLabel: UILabel!
   @IBOutlet weak var showTipsLabel: UILabel!
+  
+  
   override func viewDidLoad() {
-        super.viewDidLoad()
-        bmiLabel.text = bmiValue
-    }
-  
-    //MARK: Actions:
-  
-  @IBAction func recalculateTapped(_ sender: UIButton) {
-    self.dismiss(animated: true, completion: nil)
+    super.viewDidLoad()
+    bmiLabel.text = bmiValue
+    showTipsLabel.text = advice
+    view.backgroundColor = color
+    
   }
   
-
+  //MARK: Actions:
+  
+  @IBAction func recalculateTapped(_ sender: UIButton) {
+    self.dismiss(animated: true)
+  }
+  
+  
 }
